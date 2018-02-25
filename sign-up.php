@@ -3,7 +3,7 @@
 if (count($_POST)){
     include('db.php');
 
-    $sql_insert = "INSERT INTO Customer (name, username, phone, password, address) VALUES 
+    $sql_insert = "INSERT INTO Customer (name, username, phone, password, address) VALUES
     ('gaetan', 'gaetan', 42, 'gaetan', '42 silicon valley');";
    echo "ok";
 

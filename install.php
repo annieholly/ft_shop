@@ -47,16 +47,16 @@ $sql_invoice_item = "CREATE TABLE invoice_product (
     FOREIGN KEY (product_id) REFERENCES product(id)
 )";
 
-if (mysqli_query($link, $sql_custormer)
-    || mysqli_query($link, $sql_category)
-    || mysqli_query($link, $sql_admin)
-    || mysqli_query($link, $sql_product)
-    || mysqli_query($link, $sql_invoice)
-    || mysqli_query($link, $sql_invoice_item)
+if (mysqli_query($con, $sql_custormer)
+    || mysqli_query($con, $sql_category)
+    || mysqli_query($con, $sql_admin)
+    || mysqli_query($con, $sql_product)
+    || mysqli_query($con, $sql_invoice)
+    || mysqli_query($con, $sql_invoice_item)
     ) {
     echo "Table MyGuests created successfully";
 } else {
-    echo "Error creating table: " . mysqli_error($link);
+    echo "Error creating table: " . mysqli_error($con);
 }
 
-mysqli_close($link);
+mysqli_close($con);
