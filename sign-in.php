@@ -13,6 +13,9 @@ if (count($_POST)){
             echo 'Username or password incorrect';
         } else {
             echo 'logiin';
+            session_start();
+            $_SESSION['username'] = $_POST['username'];
+            header('Location: index.php');
         }
     }
     mysqli_free_result($result);
@@ -29,5 +32,7 @@ if (count($_POST)){
         <input type="password" name="password" placeholder="*****" required="required"><br>
         <button type="submit">Sign in</button>
     </form>
+    <br>
+    <a href="sign-up.php" title="Sign Up">Sign Up</a>
 <?php
 include("footer.php");

@@ -1,32 +1,25 @@
 <?php
-$_POST['a'] = 'a';
+
 if (count($_POST)){
     include('db.php');
+$sql_insert = "INSERT INTO Customer (name, username, phone, password, address) VALUES
+('".$_POST['name']."', '".$_POST['username']."', ".$_POST['phone'].", '".$_POST['password']."', '".$_POST['address']."');";
 
-    $sql_insert = "INSERT INTO Customer (name, username, phone, password, address) VALUES
-    ('gaetan1', 'gaetan1', 42, 'gaetan1', '42 silicon valley');";
      $result = mysqli_query($con, $sql_insert);
-     if (!$result) {
-        echo "! result";
+     if ($result) {
+          mysqli_free_result($result);
+         mysqli_close($con);
+
+         session_start();
+        $_SESSION['username'] = $_POST['username'];
+         header('Location: index.php');
      } else {
-        echo "result";
+        echo "Error insert";
      }
-  
-
-   if (!$mysqli_query($con, $sql_insert)) {
-        echo("Error description: " . mysqli_error($con));
-   }
-
-    echo "OK\n";
-    mysqli_close($con);
-    echo "OK\n";
-
 } else {
-    echo "KO";
-}
+   ?>
 
-?>
-    <h1>Sign up</h1>
+<h1>Sign up</h1>
     <form method="post" action="sign-up.php">
         <label for="name">Name : </label>
         <input id="name" type="text" name="name" placeholder="gaetan" required="required"><br>
@@ -40,5 +33,10 @@ if (count($_POST)){
         <textarea name="address" id="address" rows="10" cols="50" placeholder="6600 Dumbarton Cir, Fremont, CA 94555"></textarea><br>
         <button type="submit">Sign up</button>
     </form>
-<?php
+
+   <?php
+}
+
 include("footer.php");
+
+
