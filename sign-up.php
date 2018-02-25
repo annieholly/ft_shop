@@ -1,11 +1,17 @@
 <?php
-
+$_POST['a'] = 'a';
 if (count($_POST)){
     include('db.php');
 
     $sql_insert = "INSERT INTO Customer (name, username, phone, password, address) VALUES
-    ('gaetan', 'gaetan', 42, 'gaetan', '42 silicon valley');";
-   echo "ok";
+    ('gaetan1', 'gaetan1', 42, 'gaetan1', '42 silicon valley');";
+     $result = mysqli_query($con, $sql_insert);
+     if (!$result) {
+        echo "! result";
+     } else {
+        echo "result";
+     }
+  
 
    if (!$mysqli_query($con, $sql_insert)) {
         echo("Error description: " . mysqli_error($con));

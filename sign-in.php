@@ -2,7 +2,7 @@
 include("header.php");
 if (count($_POST)){
     include('db.php');
-
+    // INJECTION SQL == 0
     $sql_search = "SELECT * FROM Customer WHERE username = '" . $_POST['username'] . "' AND password = '" . $_POST['password'] . "';";
     $result = mysqli_query($con, $sql_search);
     if (!$result) {
