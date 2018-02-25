@@ -1,7 +1,7 @@
 <?php
 include('db.php');
 
-if ($result = mysqli_query($link, "SELECT * FROM category")) {
+if ($result = mysqli_query($con, "SELECT * FROM category")) {
 	while ($row = mysqli_fetch_array($result))
 	{
         ?>
@@ -14,4 +14,4 @@ if ($result = mysqli_query($link, "SELECT * FROM category")) {
     mysqli_free_result($result);
 }
 
-mysqli_close($link);
+mysqli_close($con);

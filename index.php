@@ -2,9 +2,9 @@
 
 include('db.php');
 
-if ($result = mysqli_query($link, "SELECT * FROM customer")) {
-    printf("Select returned %d rows.\n", mysqli_num_rows($result));
-
+if ($result = mysqli_query($con, "SELECT * FROM customer")) {
+    //printf("Select returned %d rows.\n", mysqli_num_rows($result));
+    //$pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 	while ($row = mysqli_fetch_array($result))
 	{
 		echo "first_name: ". $row['first_name'];
@@ -15,5 +15,5 @@ if ($result = mysqli_query($link, "SELECT * FROM customer")) {
     mysqli_free_result($result);
 }
 
-mysqli_close($link);
+mysqli_close($con);
 ?>
