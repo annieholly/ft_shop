@@ -48,11 +48,11 @@ $sql_invoice_item = "CREATE TABLE invoice_product (
 )";
 
 if (mysqli_query($con, $sql_custormer)
-    || mysqli_query($con, $sql_category)
-    || mysqli_query($con, $sql_admin)
-    || mysqli_query($con, $sql_product)
-    || mysqli_query($con, $sql_invoice)
-    || mysqli_query($con, $sql_invoice_item)
+    && mysqli_query($con, $sql_category)
+    && mysqli_query($con, $sql_admin)
+    && mysqli_query($con, $sql_product)
+    && mysqli_query($con, $sql_invoice)
+    && mysqli_query($con, $sql_invoice_item)
     ) {
     echo "Table MyGuests created successfully";
 } else {
