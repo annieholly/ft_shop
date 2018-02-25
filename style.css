@@ -1,0 +1,53 @@
+body, html {
+
+}
+
+header {
+  background-color: lightblue;
+  height: 100px;
+
+}
+
+nav {
+  background-color: darkgrey;
+  height: 80px;
+
+}
+
+footer {
+  background-color: slategrey;
+  height: 100px;
+}
+
+.grid {
+  display: grid;
+}
+
+.box {
+  border: 1px solid white;
+  background-color: dodgerblue;
+}
+
+.c_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1px;
+  background-color: darkgrey;
+}
+
+.category {
+  border: 1px solid white;
+  background-color: lightgrey;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 40px;
+  color: white;
+  line-height: 1;
+  font-family: Helvetica;
+  font-weight: 50;
+  cursor: pointer;
+}
