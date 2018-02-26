@@ -1,5 +1,5 @@
 <?php
-
+include("header2.php");
 if (count($_POST)){
     include('db.php');
 $sql_insert = "INSERT INTO Customer (name, username, phone, password, address) VALUES
@@ -38,5 +38,3 @@ $sql_insert = "INSERT INTO Customer (name, username, phone, password, address) V
 }
 
 include("footer.php");
-
-

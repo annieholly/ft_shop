@@ -75,7 +75,6 @@ footer {
 
 .main {
   display: flex;
-  margin: 10px;
   background-color: lightgrey;
   flex-flow: wrap;
 }
@@ -171,7 +170,7 @@ a {
 }
 
 #p_price {
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
 }
 

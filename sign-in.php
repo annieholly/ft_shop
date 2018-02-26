@@ -1,5 +1,5 @@
 <?php
-include("header.php");
+include("header2.php");
 if (count($_POST)){
     include('db.php');
     // INJECTION SQL == 0
@@ -23,6 +23,8 @@ if (count($_POST)){
 } else {
     echo "KO";
 }
+include("sign-in.html");
+
 ?>
     <h1>Sign in</h1>
     <form method="post" action="sign-in.php">
@@ -34,5 +36,6 @@ if (count($_POST)){
     </form>
     <br>
     <a href="sign-up.php" title="Sign Up">Sign Up</a>
+
 <?php
 include("footer.php");
