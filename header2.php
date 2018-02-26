@@ -11,24 +11,29 @@
 
 <body>
   <div class="grid">
-    <header>
+    <div class="header">
       <div id="h_title"><a href="/ft_shop_github/index2.php">shoppy name</a></div>
-      <div id="h_login">login info here</div>
+      <div id="h_login">
+        <a href="">Sign In</a><br>
+        <a href="">Sign Up</a>
+      </div>
       <div class="h_cart">
-        <b>0</b> cart items
+        <a class="btn" href="#open-modal">
+          <span id+"cart_num"><b>0</b></span>
+          <br>cart items</a>
       </div>
 
-      <div class="h_cart_modal modal">
-        <div class="modal-header">
-          <span class="close">&times;</span>
-          <h3>Shopping Cart Modal</h3>
-        </div>
-        <div class="modal-body">
-          <p>Modal body</p>
+      <div id="open-modal" class="h_cart_modal">
+        <div>
+          <a href="#model-close" title="Close" class="modal-close">Close</a>
+          <div>
+            <h3>Shopping Cart</h3>
+            <?php include('basket2.html') ?>
+          </div>
         </div>
       </div>
 
-    </header>
+    </div>
 
     <div class="nav">
       <ul id="navbar">
