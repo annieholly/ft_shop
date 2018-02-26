@@ -12,22 +12,22 @@
 <body>
   <div class="grid">
     <div class="header">
-      <div id="h_title"><a href="/ft_shop_github/index2.php">shoppy name</a></div>
+      <div id="h_title"><a href="./index2.php">shoppy name</a></div>
       <div id="h_login">
         <a href="">Sign In</a><br>
         <a href="">Sign Up</a>
       </div>
       <div class="h_cart">
         <a class="btn" href="#open-modal">
-          <span id+"cart_num"><b>0</b></span>
+          <span id="cart_num"><b>0</b></span>
           <br>cart items</a>
       </div>
 
       <div id="open-modal" class="h_cart_modal">
-        <div>
-          <a href="#model-close" title="Close" class="modal-close">Close</a>
+        <div id="cart_div">
+          <a href="#model-close" title="Close" class="modal-close">X</a>
           <div>
-            <h3>Shopping Cart</h3>
+            <h4 id="cart_title">Shopping Cart</h4>
             <?php include('basket2.html') ?>
           </div>
         </div>
