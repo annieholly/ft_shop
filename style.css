@@ -1,17 +1,60 @@
 body, html {
+  font-family: Helvetica;
 
 }
 
 header {
-  background-color: lightblue;
-  height: 100px;
-
+  display: flex;
+  background-color: lightgrey;
+  height: 80px;
+  align-items: center;
 }
 
-nav {
-  background-color: darkgrey;
-  height: 80px;
+header > div:nth-child(2) {
+  margin-left: auto;
+  padding: 10px;
+}
 
+.nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  height: 50px;
+  width: 100%;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+}
+
+.nav li {
+    float:left;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background-color: #111;
+}
+
+.cart_img {
+  height: 50px;
+  width: 5%;
+  height: auto;
 }
 
 footer {
@@ -23,9 +66,49 @@ footer {
   display: grid;
 }
 
+.main {
+  margin: 10px;
+  background-color: lightgrey;
+}
+
+.modal {
+  display: none;
+  background-color: purple;
+  position: fixed;
+}
+
+.h_cart {
+  background-color: green;
+}
+
+.h_cart_modal {
+  position: relative;
+  background-color: dodgerblue;
+  z-index: 1;
+}
+
+.close {
+  float: right;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 .box {
   border: 1px solid white;
   background-color: dodgerblue;
+}
+
+.product {
+  margin: 100px;
+}
+
+.test {
+    margin: 100px;
 }
 
 .c_wrapper {
@@ -51,3 +134,14 @@ footer {
   font-weight: 50;
   cursor: pointer;
 }
+
+
+
+.product-image { float: left; width: 20%; }
+.product-details { float: left; width: 37%; }
+.product-price { float: left; width: 12%; }
+.product-quantity { float: left; width: 10%; }
+.product-removal { float: left; width: 9%; }
+.product-line-price { float: left; width: 12%; text-align: right; }
+
+.product_table {float: left; width: 100%;}
